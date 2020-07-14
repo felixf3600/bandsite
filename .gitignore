@@ -1,0 +1,5 @@
+//ignores the map file
+*.css.map
+
+//ignores the fonts until I am have determined which ones to use
+sprint-1/assets/fonts/
