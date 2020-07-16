@@ -1,8 +1,19 @@
 .footer-container {
+  background-color: $color__navigation-background-fill--bandsite;
+  color: $color__field-background-fill;
+  padding: 40px $mobile__grid-margin;
 }
 .footer__title {
+  @include font__mobile-h1-header;
+  font-weight: bold;
 }
 .footer__social-media {
+  width: 40%;
+  @include display-flex(row, space-between, center);
+}
+.footer__social-link {
+}
+.footer__icon {
 }
 .footer__logo {
 }
@@ -13,6 +24,8 @@
 .footer__label-info {
 }
 .footer__label-email {
+  text-decoration: none;
+  color: $color__label-style;
 }
 .footer__copyright {
 }

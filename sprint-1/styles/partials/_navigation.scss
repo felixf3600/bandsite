@@ -1,6 +1,7 @@
 .nav__container {
-  height: 80px;
+  min-height: 80px;
   width: 100%;
+  min-width: 320px;
   @include display-flex(column, center, center);
   background-color: $color__navigation-background-fill--bandsite;
   color: $color__field-background-fill;

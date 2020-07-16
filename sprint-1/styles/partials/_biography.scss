@@ -11,8 +11,10 @@ body {
 .hero-banner__container {
   width: 100vw;
   height: 57.19vw;
+  min-width: 320px;
+  min-height: 183px;
   background-size: cover;
-  margin: 0;
+  margin: 0 0 $mobile__grid-margin 0;
   position: relative;
   background-image: $hero-image__overlay;
   //  url(../assets/images/tajmia-loiacono-FVLeoPbW5PA-unsplash.jpg);
@@ -23,9 +25,9 @@ body {
 .hero-banner__title {
   @include font__mobile-h1-header;
   position: absolute;
-  top: 33%;
-  width: 66%;
-  left: 0;
+  top: 20%;
+  width: 60%;
+  left: $mobile__grid-margin;
   color: white;
   @include tablet {
     @include font__hero-header;
@@ -33,38 +35,57 @@ body {
 }
 
 .about__container {
+  margin: $mobile__grid-margin * 2 $mobile__grid-margin $mobile__grid-margin *
+    2.5 $mobile__grid-margin;
 }
 .about__title {
+  @include font__mobile-h1-header;
+  margin: 0;
 }
-.about__inner-container {
-}
+// .about__inner-container {
+// }
 .about__image {
+  min-width: 288px;
+  width: 100%;
+  margin: 24px 0;
 }
 .about__caption {
+  margin: 0;
+  @include font__mobile-h2-header;
 }
 .about__caption-author {
+  margin: 32px 0 40px 0;
 }
 .about__inner-container-tittle {
+  margin: 0;
 }
 .about__artice-container {
+  margin: 24px 0 40px 0;
 }
-.about__article {
+.about__article:first-child {
+  margin-top: 0px;
 }
-.photo-gallery {
+.about__article:last-child {
+  margin-bottom: 0px;
+}
+.photo-gallery__container {
+  margin: $mobile__grid-margin * 2 $mobile__grid-margin $mobile__grid-margin * 2
+    $mobile__grid-margin;
 }
 .photo-gallery__title {
-  margin: 32px, $mobile__grid-margin, 24px, $mobile__grid-margin;
+  margin-top: 0 0 24px 0;
   @include font__mobile-h1-header;
 }
 .photo-gallery__grid-container {
-  margin: 0px, $mobile__grid-margin, $mobile__grid-margin, $mobile__grid-margin;
+  margin: 0px;
 }
 .photo-gallery__image-container {
-  //   min-width: 288px;
-  //   min-height: 162px;
+  margin: 0 0 16px 0;
+  object-fit: cover;
 }
 .photo-gallery__image {
   min-width: 288px;
   min-height: 162px;
   width: 100%;
+  object-fit: contain;
 }
