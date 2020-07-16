@@ -1,0 +1,431 @@
+@font-face {
+  font-family: "avenir-next-lt-pro";
+  src: url("AvenirNextLTPro-DemiIt.eot");
+  src: url("AvenirNextLTPro-DemiIt.eot?#iefix") format("embedded-opentype"), url("AvenirNextLTPro-DemiIt.woff2") format("woff2"), url("AvenirNextLTPro-DemiIt.woff") format("woff"), url("AvenirNextLTPro-DemiIt.ttf") format("truetype"), url("AvenirNextLTPro-DemiIt.svg#AvenirNextLTPro-DemiIt") format("svg");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "avenir-next-lt-pro";
+  src: url("AvenirNextLTPro-Bold.eot");
+  src: url("AvenirNextLTPro-Bold.eot?#iefix") format("embedded-opentype"), url("AvenirNextLTPro-Bold.woff2") format("woff2"), url("AvenirNextLTPro-Bold.woff") format("woff"), url("AvenirNextLTPro-Bold.ttf") format("truetype"), url("AvenirNextLTPro-Bold.svg#AvenirNextLTPro-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "avenir-next-lt-pro";
+  src: url("AvenirNextLTPro-Thin.eot");
+  src: url("AvenirNextLTPro-Thin.eot?#iefix") format("embedded-opentype"), url("AvenirNextLTPro-Thin.woff2") format("woff2"), url("AvenirNextLTPro-Thin.woff") format("woff"), url("AvenirNextLTPro-Thin.ttf") format("truetype"), url("AvenirNextLTPro-Thin.svg#AvenirNextLTPro-Thin") format("svg");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "avenir-next-lt-pro UltLight";
+  src: url("AvenirNextLTPro-UltLtIt.eot");
+  src: url("AvenirNextLTPro-UltLtIt.eot?#iefix") format("embedded-opentype"), url("AvenirNextLTPro-UltLtIt.woff2") format("woff2"), url("AvenirNextLTPro-UltLtIt.woff") format("woff"), url("AvenirNextLTPro-UltLtIt.ttf") format("truetype"), url("AvenirNextLTPro-UltLtIt.svg#AvenirNextLTPro-UltLtIt") format("svg");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "avenir-next-lt-pro";
+  src: url("AvenirNextLTPro-Demi.eot");
+  src: url("AvenirNextLTPro-Demi.eot?#iefix") format("embedded-opentype"), url("AvenirNextLTPro-Demi.woff2") format("woff2"), url("AvenirNextLTPro-Demi.woff") format("woff"), url("AvenirNextLTPro-Demi.ttf") format("truetype"), url("AvenirNextLTPro-Demi.svg#AvenirNextLTPro-Demi") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "avenir-next-lt-pro";
+  src: url("AvenirNextLTPro-ThinIt.eot");
+  src: url("AvenirNextLTPro-ThinIt.eot?#iefix") format("embedded-opentype"), url("AvenirNextLTPro-ThinIt.woff2") format("woff2"), url("AvenirNextLTPro-ThinIt.woff") format("woff"), url("AvenirNextLTPro-ThinIt.ttf") format("truetype"), url("AvenirNextLTPro-ThinIt.svg#AvenirNextLTPro-ThinIt") format("svg");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "avenir-next-lt-pro";
+  src: url("AvenirNextLTPro-MediumIt.eot");
+  src: url("AvenirNextLTPro-MediumIt.eot?#iefix") format("embedded-opentype"), url("AvenirNextLTPro-MediumIt.woff2") format("woff2"), url("AvenirNextLTPro-MediumIt.woff") format("woff"), url("AvenirNextLTPro-MediumIt.ttf") format("truetype"), url("AvenirNextLTPro-MediumIt.svg#AvenirNextLTPro-MediumIt") format("svg");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "avenir-next-lt-pro";
+  src: url("AvenirNextLTPro-HeavyIt.eot");
+  src: url("AvenirNextLTPro-HeavyIt.eot?#iefix") format("embedded-opentype"), url("AvenirNextLTPro-HeavyIt.woff2") format("woff2"), url("AvenirNextLTPro-HeavyIt.woff") format("woff"), url("AvenirNextLTPro-HeavyIt.ttf") format("truetype"), url("AvenirNextLTPro-HeavyIt.svg#AvenirNextLTPro-HeavyIt") format("svg");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "avenir-next-lt-pro UltLight";
+  src: url("AvenirNextLTPro-UltLt.eot");
+  src: url("AvenirNextLTPro-UltLt.eot?#iefix") format("embedded-opentype"), url("AvenirNextLTPro-UltLt.woff2") format("woff2"), url("AvenirNextLTPro-UltLt.woff") format("woff"), url("AvenirNextLTPro-UltLt.ttf") format("truetype"), url("AvenirNextLTPro-UltLt.svg#AvenirNextLTPro-UltLt") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "avenir-next-lt-pro";
+  src: url("AvenirNextLTPro-Light.eot");
+  src: url("AvenirNextLTPro-Light.eot?#iefix") format("embedded-opentype"), url("AvenirNextLTPro-Light.woff2") format("woff2"), url("AvenirNextLTPro-Light.woff") format("woff"), url("AvenirNextLTPro-Light.ttf") format("truetype"), url("AvenirNextLTPro-Light.svg#AvenirNextLTPro-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "avenir-next-lt-pro";
+  src: url("AvenirNextLTPro-It.eot");
+  src: url("AvenirNextLTPro-It.eot?#iefix") format("embedded-opentype"), url("AvenirNextLTPro-It.woff2") format("woff2"), url("AvenirNextLTPro-It.woff") format("woff"), url("AvenirNextLTPro-It.ttf") format("truetype"), url("AvenirNextLTPro-It.svg#AvenirNextLTPro-It") format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "avenir-next-lt-pro";
+  src: url("AvenirNextLTPro-Medium.eot");
+  src: url("AvenirNextLTPro-Medium.eot?#iefix") format("embedded-opentype"), url("AvenirNextLTPro-Medium.woff2") format("woff2"), url("AvenirNextLTPro-Medium.woff") format("woff"), url("AvenirNextLTPro-Medium.ttf") format("truetype"), url("AvenirNextLTPro-Medium.svg#AvenirNextLTPro-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "avenir-next-lt-pro";
+  src: url("AvenirNextLTPro-Heavy.eot");
+  src: url("AvenirNextLTPro-Heavy.eot?#iefix") format("embedded-opentype"), url("AvenirNextLTPro-Heavy.woff2") format("woff2"), url("AvenirNextLTPro-Heavy.woff") format("woff"), url("AvenirNextLTPro-Heavy.ttf") format("truetype"), url("AvenirNextLTPro-Heavy.svg#AvenirNextLTPro-Heavy") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "avenir-next-lt-pro";
+  src: url("AvenirNextLTPro-Regular.eot");
+  src: url("AvenirNextLTPro-Regular.eot?#iefix") format("embedded-opentype"), url("AvenirNextLTPro-Regular.woff2") format("woff2"), url("AvenirNextLTPro-Regular.woff") format("woff"), url("AvenirNextLTPro-Regular.ttf") format("truetype"), url("AvenirNextLTPro-Regular.svg#AvenirNextLTPro-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "avenir-next-lt-pro";
+  src: url("AvenirNextLTPro-BoldIt.eot");
+  src: url("AvenirNextLTPro-BoldIt.eot?#iefix") format("embedded-opentype"), url("AvenirNextLTPro-BoldIt.woff2") format("woff2"), url("AvenirNextLTPro-BoldIt.woff") format("woff"), url("AvenirNextLTPro-BoldIt.ttf") format("truetype"), url("AvenirNextLTPro-BoldIt.svg#AvenirNextLTPro-BoldIt") format("svg");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "avenir-next-lt-pro";
+  src: url("AvenirNextLTPro-LightIt.eot");
+  src: url("AvenirNextLTPro-LightIt.eot?#iefix") format("embedded-opentype"), url("AvenirNextLTPro-LightIt.woff2") format("woff2"), url("AvenirNextLTPro-LightIt.woff") format("woff"), url("AvenirNextLTPro-LightIt.ttf") format("truetype"), url("AvenirNextLTPro-LightIt.svg#AvenirNextLTPro-LightIt") format("svg");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-BoldItalic.eot");
+  src: url("Roboto-BoldItalic.eot?#iefix") format("embedded-opentype"), url("Roboto-BoldItalic.woff2") format("woff2"), url("Roboto-BoldItalic.woff") format("woff"), url("Roboto-BoldItalic.ttf") format("truetype"), url("Roboto-BoldItalic.svg#Roboto-BoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Regular.eot");
+  src: url("Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("Roboto-Regular.woff2") format("woff2"), url("Roboto-Regular.woff") format("woff"), url("Roboto-Regular.ttf") format("truetype"), url("Roboto-Regular.svg#Roboto-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-BlackItalic.eot");
+  src: url("Roboto-BlackItalic.eot?#iefix") format("embedded-opentype"), url("Roboto-BlackItalic.woff2") format("woff2"), url("Roboto-BlackItalic.woff") format("woff"), url("Roboto-BlackItalic.ttf") format("truetype"), url("Roboto-BlackItalic.svg#Roboto-BlackItalic") format("svg");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-ThinItalic.eot");
+  src: url("Roboto-ThinItalic.eot?#iefix") format("embedded-opentype"), url("Roboto-ThinItalic.woff2") format("woff2"), url("Roboto-ThinItalic.woff") format("woff"), url("Roboto-ThinItalic.ttf") format("truetype"), url("Roboto-ThinItalic.svg#Roboto-ThinItalic") format("svg");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Italic.eot");
+  src: url("Roboto-Italic.eot?#iefix") format("embedded-opentype"), url("Roboto-Italic.woff2") format("woff2"), url("Roboto-Italic.woff") format("woff"), url("Roboto-Italic.ttf") format("truetype"), url("Roboto-Italic.svg#Roboto-Italic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-LightItalic.eot");
+  src: url("Roboto-LightItalic.eot?#iefix") format("embedded-opentype"), url("Roboto-LightItalic.woff2") format("woff2"), url("Roboto-LightItalic.woff") format("woff"), url("Roboto-LightItalic.ttf") format("truetype"), url("Roboto-LightItalic.svg#Roboto-LightItalic") format("svg");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Medium.eot");
+  src: url("Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("Roboto-Medium.woff2") format("woff2"), url("Roboto-Medium.woff") format("woff"), url("Roboto-Medium.ttf") format("truetype"), url("Roboto-Medium.svg#Roboto-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Black.eot");
+  src: url("Roboto-Black.eot?#iefix") format("embedded-opentype"), url("Roboto-Black.woff2") format("woff2"), url("Roboto-Black.woff") format("woff"), url("Roboto-Black.ttf") format("truetype"), url("Roboto-Black.svg#Roboto-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Light.eot");
+  src: url("Roboto-Light.eot?#iefix") format("embedded-opentype"), url("Roboto-Light.woff2") format("woff2"), url("Roboto-Light.woff") format("woff"), url("Roboto-Light.ttf") format("truetype"), url("Roboto-Light.svg#Roboto-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Bold.eot");
+  src: url("Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("Roboto-Bold.woff2") format("woff2"), url("Roboto-Bold.woff") format("woff"), url("Roboto-Bold.ttf") format("truetype"), url("Roboto-Bold.svg#Roboto-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-MediumItalic.eot");
+  src: url("Roboto-MediumItalic.eot?#iefix") format("embedded-opentype"), url("Roboto-MediumItalic.woff2") format("woff2"), url("Roboto-MediumItalic.woff") format("woff"), url("Roboto-MediumItalic.ttf") format("truetype"), url("Roboto-MediumItalic.svg#Roboto-MediumItalic") format("svg");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Thin.eot");
+  src: url("Roboto-Thin.eot?#iefix") format("embedded-opentype"), url("Roboto-Thin.woff2") format("woff2"), url("Roboto-Thin.woff") format("woff"), url("Roboto-Thin.ttf") format("truetype"), url("Roboto-Thin.svg#Roboto-Thin") format("svg");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+.nav__container {
+  height: 80px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #323232;
+  color: #fafafa;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.nav__logo {
+  width: 100%;
+  text-align: center;
+  font-size: 1.85rem;
+  line-height: 2.46rem;
+  margin: 0.32rem 0 0.92rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__logo {
+    width: 124px;
+    font-size: 1.71rem;
+    line-height: 2.29rem;
+    margin-left: 24px;
+    width: 16.15%;
+  }
+}
+
+.nav__link-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0px;
+  width: 100%;
+  padding-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__link-list {
+    width: 32.3%;
+  }
+}
+
+.nav__list-item {
+  width: 50%;
+  min-width: 160px;
+  text-align: center;
+  position: relative;
+}
+
+.nav__list-item--current-page::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 0px;
+  height: 5px;
+  width: 100%;
+  background-color: #fafafa;
+}
+
+.nav__link {
+  text-decoration: none;
+  font-size: 1.08rem;
+  line-height: 1.7rem;
+  color: #afafaf;
+  position: relative;
+}
+
+.nav__link--current-page {
+  color: #fafafa;
+}
+
+html,
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 13px;
+  line-height: 1.38rem;
+  min-width: 320px;
+  margin: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  html,
+  body {
+    font-size: 14px;
+    line-height: 1.57rem;
+  }
+}
+
+.hero-banner__container {
+  width: 100vw;
+  height: 57.19vw;
+  background-size: cover;
+  margin: 0;
+  position: relative;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 50, 50, 0.5)), to(rgba(50, 50, 50, 0.5))), url(../assets/images/tajmia-loiacono-FVLeoPbW5PA-unsplash.jpg);
+  background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../assets/images/tajmia-loiacono-FVLeoPbW5PA-unsplash.jpg);
+}
+
+@media screen and (min-width: 768px) {
+  .hero-banner__container {
+    height: 52.08vw;
+  }
+}
+
+.hero-banner__title {
+  font-size: 1.85rem;
+  line-height: 2.46rem;
+  position: absolute;
+  top: 33%;
+  width: 66%;
+  left: 0;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-banner__title {
+    font-size: 4.29rem;
+    line-height: 4.86rem;
+  }
+}
+
+.photo-gallery__title {
+  margin: 32px, 16px, 24px, 16px;
+  font-size: 1.85rem;
+  line-height: 2.46rem;
+}
+
+.photo-gallery__grid-container {
+  margin: 0px, 16px, 16px, 16px;
+}
+
+.photo-gallery__image {
+  min-width: 288px;
+  min-height: 162px;
+  width: 100%;
+}
+/*# sourceMappingURL=main.css.map */

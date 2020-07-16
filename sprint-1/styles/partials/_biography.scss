@@ -1,0 +1,70 @@
+html,
+body {
+  box-sizing: border-box;
+  @include font__mobile-normal;
+  min-width: $mobile__min-width;
+  margin: 0px;
+  @include tablet {
+    @include font__normal;
+  }
+}
+.hero-banner__container {
+  width: 100vw;
+  height: 57.19vw;
+  background-size: cover;
+  margin: 0;
+  position: relative;
+  background-image: $hero-image__overlay;
+  //  url(../assets/images/tajmia-loiacono-FVLeoPbW5PA-unsplash.jpg);
+  @include tablet {
+    height: 52.08vw;
+  }
+}
+.hero-banner__title {
+  @include font__mobile-h1-header;
+  position: absolute;
+  top: 33%;
+  width: 66%;
+  left: 0;
+  color: white;
+  @include tablet {
+    @include font__hero-header;
+  }
+}
+
+.about__container {
+}
+.about__title {
+}
+.about__inner-container {
+}
+.about__image {
+}
+.about__caption {
+}
+.about__caption-author {
+}
+.about__inner-container-tittle {
+}
+.about__artice-container {
+}
+.about__article {
+}
+.photo-gallery {
+}
+.photo-gallery__title {
+  margin: 32px, $mobile__grid-margin, 24px, $mobile__grid-margin;
+  @include font__mobile-h1-header;
+}
+.photo-gallery__grid-container {
+  margin: 0px, $mobile__grid-margin, $mobile__grid-margin, $mobile__grid-margin;
+}
+.photo-gallery__image-container {
+  //   min-width: 288px;
+  //   min-height: 162px;
+}
+.photo-gallery__image {
+  min-width: 288px;
+  min-height: 162px;
+  width: 100%;
+}

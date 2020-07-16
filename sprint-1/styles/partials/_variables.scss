@@ -1,15 +1,18 @@
 // general font
-$hero-header__font: "avenirnext", "roboto";
+$master__font: "avenir-next-lt-pro", "roboto", sans-serif;
 // mobile font info
 // h1 header
 $mobile-h1-header__font-size: 1.85rem; // 24px based on 13px
-$mobile-h1-header__line-height: 2.46rem; // based on 13px
+$mobile-h1-header__line-height: 2.46rem; // 32px  based on 13px
+
 // subheader h2
 $mobile-h2-header__font-size: 1.08rem; // 14px based on 13px
 $mobile-h2-header__line-height: 1.7rem; // 22px based on 13px
+
 // paragraph, list and contact info
 $mobile-normal__font-size: 13px; // base mobile font size
 $mobile__line-height: 1.38rem;
+
 // h5 labels
 $mobile-labels__font-size: 0.92rem;
 $mobile-labels__line-height: 1.54rem;
@@ -18,18 +21,23 @@ $mobile-labels__line-height: 1.54rem;
 // hero header h1
 $hero-header__font-size: 4.29rem; // 60px based on 14px
 $hero-header__line-height: 4.86rem; // 68px based on 14px
+
 // header h1
 $h1__font-size: 2.57rem; // 36px based on 14px
 $h1__line-height: 3.14rem; // 44px based on 14px
+
 // header h2
 $h2__font-size: 1.71rem; // 24 px based on 14px base
 $h2__line-height: 2.29rem; // 32 px based on 14px
+
 // subheader h3
 $sub-header__font-size: 1.14rem; // 16px based on 14px
 $sub-header__line-height: 1.71rem; // 24px based on 14px
+
 // h4 paragraph and comments
 $normal__font-size: 14px; // base
 $normal__line-height: 1.57rem; // 22px based on 14px
+
 // h4 list and contact info. uses normal and only changes line height
 $list__line-height: 1.43rem; // 20px based on 14px
 // h5 label only changes the font size and keeps the list font size
@@ -88,9 +96,13 @@ $action-button__blurr: 32px;
 $action-button__spread: 4px;
 
 // hero image overlay
-$hero-image__overlay: linear-gradient(black, 1), rgba($color__paragraph, 0.5);
+$hero-image__overlay: linear-gradient(
+    rgba($color__paragraph, 0.5),
+    rgba($color__paragraph, 0.5)
+  ),
+  url(../assets/images/tajmia-loiacono-FVLeoPbW5PA-unsplash.jpg);
 
 // Max width
-$desktop__max-width: 1440px;
-$tablet__max-width: 768px;
-$mobile__max-width: 320px;
+$desktop__min-width: 1440px;
+$tablet__min-width: 768px;
+$mobile__min-width: 320px;

@@ -1,0 +1,62 @@
+.nav__container {
+  height: 80px;
+  width: 100%;
+  @include display-flex(column, center, center);
+  background-color: $color__navigation-background-fill--bandsite;
+  color: $color__field-background-fill;
+  @include tablet {
+    @include display-flex(row, flex-start, center);
+  }
+}
+.nav__logo {
+  width: 100%;
+  text-align: center;
+  @include font__mobile-h1-header;
+  margin: 0.32rem 0 0.92rem 0;
+  @include tablet {
+    width: $tablet__grid-column + $tablet__grid-gutter;
+    @include font__h2;
+    margin-left: $tablet__grid-margin;
+    width: 16.15%;
+  }
+}
+// .nav__link-container {
+//     width: 83.85%;
+// }
+.nav__link-list {
+  @include display-flex(row, center, center);
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0px;
+  width: 100%;
+  padding-bottom: $base__padding;
+  @include tablet {
+    width: 32.3%;
+  }
+}
+.nav__list-item {
+  width: 50%;
+  min-width: $mobile__min-width/2;
+  text-align: center;
+  position: relative;
+  &--current-page {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -9px;
+      left: 0px;
+      height: 5px;
+      width: 100%;
+      background-color: $color__field-background-fill;
+    }
+  }
+}
+.nav__link {
+  text-decoration: none;
+  @include font__mobile-h2-header;
+  color: $color__label-style;
+  position: relative;
+  &--current-page {
+    color: $color__field-background-fill;
+  }
+}
