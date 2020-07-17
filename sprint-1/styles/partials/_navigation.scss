@@ -1,7 +1,7 @@
 .nav__container {
-  min-height: 80px;
+  min-height: $nav-bar__height;
   width: 100%;
-  min-width: 320px;
+  min-width: $mobile__min-width;
   @include display-flex(column, center, center);
   background-color: $color__navigation-background-fill--bandsite;
   color: $color__field-background-fill;
@@ -18,21 +18,18 @@
     width: $tablet__grid-column + $tablet__grid-gutter;
     @include font__h2;
     margin-left: $tablet__grid-margin;
-    width: 16.15%;
   }
 }
-// .nav__link-container {
-//     width: 83.85%;
-// }
+
 .nav__link-list {
-  @include display-flex(row, center, center);
+  @include display-flex(row, right, flex-end);
   list-style-type: none;
   padding-left: 0;
   margin: 0px;
   width: 100%;
   padding-bottom: $base__padding;
   @include tablet {
-    width: 32.3%;
+    width: ($tablet__grid-column + $tablet__grid-gutter) * 2;
   }
 }
 .nav__list-item {
@@ -51,6 +48,16 @@
       background-color: $color__field-background-fill;
     }
   }
+  @include tablet {
+    text-align: right;
+    &--current-page {
+      &::after {
+        bottom: -32px;
+        left: 85px;
+        width: 80px;
+      }
+    }
+  }
 }
 .nav__link {
   text-decoration: none;
@@ -59,5 +66,8 @@
   position: relative;
   &--current-page {
     color: $color__field-background-fill;
+  }
+  @include tablet {
+    @include font__sub-header;
   }
 }

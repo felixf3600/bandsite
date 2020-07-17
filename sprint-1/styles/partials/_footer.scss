@@ -1,6 +1,10 @@
-.footer-container {
+.footer__container {
+  min-width: $mobile__min-width;
+  width: 100%;
   background-color: $color__navigation-background-fill--bandsite;
   color: $color__field-background-fill;
+}
+.footer__inner-container {
   padding: 40px $mobile__grid-margin;
 }
 .footer__title {

@@ -1,23 +1,23 @@
 html,
 body {
   box-sizing: border-box;
+  //   width: 100%;
   @include font__mobile-normal;
-  min-width: $mobile__min-width;
+  //   min-width: $mobile__min-width;
   margin: 0px;
   @include tablet {
     @include font__normal;
   }
 }
 .hero-banner__container {
-  width: 100vw;
+  width: 100%;
   height: 57.19vw;
-  min-width: 320px;
-  min-height: 183px;
+  min-width: $mobile__min-width;
+  //   min-height: 183px;
   background-size: cover;
   margin: 0 0 $mobile__grid-margin 0;
   position: relative;
   background-image: $hero-image__overlay;
-  //  url(../assets/images/tajmia-loiacono-FVLeoPbW5PA-unsplash.jpg);
   @include tablet {
     height: 52.08vw;
   }
@@ -45,22 +45,22 @@ body {
 // .about__inner-container {
 // }
 .about__image {
-  min-width: 288px;
+  //   min-width: 288px;
   width: 100%;
-  margin: 24px 0;
+  margin: $mobile__grid-gutter 0;
 }
 .about__caption {
   margin: 0;
   @include font__mobile-h2-header;
 }
 .about__caption-author {
-  margin: 32px 0 40px 0;
+  margin: $base__padding * 4 0 $base__padding * 5 0;
 }
 .about__inner-container-tittle {
   margin: 0;
 }
 .about__artice-container {
-  margin: 24px 0 40px 0;
+  margin: $base__padding * 3 0 $base__padding * 5 0;
 }
 .about__article:first-child {
   margin-top: 0px;
@@ -73,19 +73,18 @@ body {
     $mobile__grid-margin;
 }
 .photo-gallery__title {
-  margin-top: 0 0 24px 0;
+  margin-top: 0 0 $base__padding * 3 0;
   @include font__mobile-h1-header;
 }
 .photo-gallery__grid-container {
   margin: 0px;
 }
 .photo-gallery__image-container {
-  margin: 0 0 16px 0;
+  margin: 0 0 $base__padding * 2 0;
   object-fit: cover;
 }
 .photo-gallery__image {
-  min-width: 288px;
-  min-height: 162px;
+  min-width: $mobile__min-width - ($mobile__grid-margin * 2);
   width: 100%;
   object-fit: contain;
 }
