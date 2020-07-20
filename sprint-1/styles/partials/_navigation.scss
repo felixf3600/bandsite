@@ -8,16 +8,24 @@
   @include tablet {
     @include display-flex(row, flex-start, center);
   }
+  a {
+    text-decoration: none;
+    color: $color__field-background-fill;
+  }
 }
 .nav__logo {
   width: 100%;
   text-align: center;
   @include font__mobile-h1-header;
+  font-weight: 300;
   margin: 0.32rem 0 0.92rem 0;
   @include tablet {
     width: $tablet__grid-column + $tablet__grid-gutter;
     @include font__h2;
-    margin-left: $tablet__grid-margin;
+    margin: 0 0 0 $tablet__grid-margin;
+  }
+  @include desktop {
+    margin-left: $desktop__grid-margin;
   }
 }
 
@@ -30,6 +38,7 @@
   padding-bottom: $base__padding;
   @include tablet {
     width: ($tablet__grid-column + $tablet__grid-gutter) * 2;
+    padding-bottom: 0px;
   }
 }
 .nav__list-item {
@@ -49,13 +58,22 @@
     }
   }
   @include tablet {
-    text-align: right;
+    width: 80px;
+    text-align: end;
     &--current-page {
       &::after {
-        bottom: -32px;
-        left: 85px;
+        bottom: -28px;
+        left: 82px;
         width: 80px;
       }
+    }
+  }
+  @include desktop {
+    width: 80px;
+    min-width: 0px;
+    margin-left: 56px;
+    &::after {
+      left: -5px;
     }
   }
 }
@@ -69,5 +87,29 @@
   }
   @include tablet {
     @include font__sub-header;
+  }
+  @media (hover: hover) {
+    &:hover {
+      animation-name: expand;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+@keyframes expand {
+  0% {
+    color: white;
+  }
+  25% {
+    color: yellow;
+  }
+  50% {
+    color: orange;
+  }
+  75% {
+    color: red;
+  }
+  100% {
+    color: green;
   }
 }

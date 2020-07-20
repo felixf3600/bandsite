@@ -3,33 +3,121 @@
   width: 100%;
   background-color: $color__navigation-background-fill--bandsite;
   color: $color__field-background-fill;
+  padding-bottom: $base__padding * 5;
 }
 .footer__inner-container {
-  padding: 40px $mobile__grid-margin;
+  padding: $base__padding * 5 $mobile__grid-margin;
+  @include tablet {
+    @include display-flex(column, center, left);
+    padding: $base__padding * 5 $tablet__grid-margin;
+  }
+  @include desktop {
+    padding: $base__padding * 6 $desktop__grid-margin;
+  }
+}
+.footer__title-bar {
+  @include tablet {
+    width: 100%;
+
+    @include display-flex(row, space-between, center);
+  }
+}
+.footer__left-side {
+  @include tablet {
+    @include display-flex(row, flex-start, center);
+  }
 }
 .footer__title {
   @include font__mobile-h1-header;
+  margin: 0;
   font-weight: bold;
+  @include tablet {
+    @include font__h1;
+    width: $tablet__grid-gutter + ($tablet__grid-column * 2);
+    margin-right: $tablet__grid-gutter * 2;
+  }
 }
 .footer__social-media {
-  width: 40%;
-  @include display-flex(row, space-between, center);
+  margin-bottom: 14px;
+  width: $mobile__grid-gutter + ($mobile__grid-column * 3);
+  @include display-flex(row, left, center);
+  @include tablet {
+    width: $tablet__grid-column * 3 + $tablet__grid-gutter * 2;
+    justify-content: left;
+    margin: 0px;
+  }
 }
 .footer__social-link {
 }
 .footer__icon {
+  height: $mobile-h1-header__line-height/2;
+  margin-right: $mobile__grid-column;
+  @include tablet {
+    margin-right: $tablet__grid-gutter * 2;
+    height: $h2__line-height/1.5;
+  }
 }
+
 .footer__logo {
+  display: none;
+  font-weight: 300;
+  @include tablet {
+    margin: 0px;
+    display: inline-block;
+    @include font__h2;
+    width: $tablet__grid-column + $tablet__grid-gutter;
+    text-align: right;
+  }
+}
+.footer__labels {
+  @include tablet {
+    width: ($tablet__grid-column * 6) + ($tablet__grid-gutter * 5);
+    @include display-flex(row, space-between, center);
+  }
 }
 .footer__labels-container {
+  margin-bottom: $base__padding * 3;
+  @include tablet {
+    width: ($tablet__grid-column * 2) + $tablet__grid-gutter;
+    margin-bottom: $base__padding * 5;
+    @include font__labels;
+  }
 }
+
 .footer__label-title {
+  margin: $base__padding * 3 0;
+  h3 {
+    margin: 0;
+  }
+  @include tablet {
+    margin-top: $base__padding * 6;
+    margin-bottom: $base__padding * 3;
+  }
+  @include desktop {
+    margin-top: $base__padding * 7;
+  }
 }
 .footer__label-info {
+  margin: $base__padding * 3 0;
+  p {
+    margin: 0;
+  }
 }
 .footer__label-email {
   text-decoration: none;
   color: $color__label-style;
+  margin: $base__padding * 3 0;
+  @include tablet {
+    margin-bottom: $base__padding * 5;
+  }
 }
 .footer__copyright {
+  @include tablet {
+    @include font__labels;
+    width: 100%;
+    text-align: left;
+    span {
+      display: none;
+    }
+  }
 }
