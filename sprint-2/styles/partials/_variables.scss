@@ -1,0 +1,119 @@
+// general font
+$master__font: "avenir-next-lt-pro", "roboto", sans-serif;
+// mobile font info
+// h1 header
+$mobile-h1-header__font-size: 7.5; // 24px 7.5vw
+$mobile-h1-header__line-height: 10vw; // 32px 10vw
+$mobile-h1-header__font-size--shows: 35px; // 24px 11vw
+$mobile-h1-header__line-height--shows: 42px; // 32px 13vw
+
+// subheader h2
+$mobile-h2-header__font-size: 4.38vw; // 14px
+$mobile-h2-header__line-height: 6.88vw; // 22px
+
+// paragraph, list and contact info
+$mobile-normal__font-size: 4.06vw; // 13px base mobile font size
+$mobile__line-height: 6.62vw; /// 18px
+
+// h5 labels
+$mobile-labels__font-size: 3.75vw; // 12px
+$mobile-labels__line-height: 6.25vw; // 20px
+
+// desktop and tablet font info
+// hero header h1
+$hero-header__font-size: 4.29rem; // 60px based on 14px
+$hero-header__line-height: 4.86rem; // 68px based on 14px
+
+// header h1
+$h1__font-size: 2.57rem; // 36px based on 14px
+$h1__line-height: 3.14rem; // 44px based on 14px
+
+// header h2
+$h2__font-size: 1.71rem; // 24 px based on 14px base
+$h2__line-height: 2.29rem; // 32 px based on 14px
+
+// subheader h3
+$sub-header__font-size: 1.14rem; // 16px based on 14px
+$sub-header__line-height: 1.71rem; // 24px based on 14px
+
+// h4 paragraph and comments
+$normal__font-size: 14px; // base
+$normal__line-height: 1.57rem; // 22px based on 14px
+
+// h4 list and contact info. uses normal and only changes line height
+$list__line-height: 1.43rem; // 20px based on 14px
+// h5 label only changes the font size and keeps the list font size
+$labels__font-size: 0.86rem; // 12px based on 14px
+
+// color palette
+// global colors
+$color__paragraph: #323232;
+$color__label-style: #afafaf;
+$color__field-border: #e1e1e1;
+$color__field-background-fill: #fafafa;
+$color__divider: #004892; // mercury
+$color__showdows: #000000;
+// instock colors
+$color__navigation-background-fill--instock: #323232;
+$color__primary-cta--instock: #004892;
+$color__primary-hover--instock: #002f5f;
+// brainflix colors
+$color__navigation-background-fill--brainfix: #323232;
+$color__primary-cta--brainfix: #0095ff;
+$color__primary-hover--brainfix: #0065ad;
+// bandsite colors
+$color__navigation-background-fill--bandsite: #323232;
+$color__primary-cta--bandsite: #323232;
+$color__primary-hover--bandsite: #0065ad;
+
+// grid column, gutter and margin sizes
+// mobile grid sizes 4 column grid
+$mobile__grid-column: 54px; // max width
+$mobile__grid-gutter: 24px; // max width
+$mobile__grid-margin: 16px; // max width
+// tablet grid sizes 6 column grid
+$tablet__grid-column: 100px;
+$tablet__grid-gutter: 24px;
+$tablet__grid-margin: 24px;
+// desktop grid sizes 12 column grid
+$desktop__grid-column: 68px;
+$desktop__grid-gutter: 24px;
+$desktop__grid-margin: 180px;
+
+// base padding
+$base__padding: 8px; // base used with multipliers
+
+// dividers
+$desktop__divider-width: 1080px;
+$tablet__divider-width: 720px;
+$mobile__divider-width: 288px;
+$divider__height: 1px;
+
+// call to action (CTA or buttons) info
+$primary-button__border-radious: 4px;
+$action-button__border-radious: 2px;
+$action-button__shadow-X: 0px;
+$action-button__shadow-Y: 40px;
+$action-button__blurr: 32px;
+$action-button__spread: 4px;
+
+// hero image overlay
+$hero-image__overlay--biography: linear-gradient(
+    rgba($color__paragraph, 0.5),
+    rgba($color__paragraph, 0.5)
+  ),
+  url(../assets/images/tajmia-loiacono-FVLeoPbW5PA-unsplash.jpg);
+
+$hero-image__overlay--shows: linear-gradient(
+    rgba($color__paragraph, 0.5),
+    rgba($color__paragraph, 0.5)
+  ),
+  url(../assets/images/aditya-chinchure-ZhQCZjr9fHo-unsplash.jpg);
+
+// Max width
+$desktop__min-width: 1440px;
+$tablet__min-width: 768px;
+$mobile__min-width: 320px;
+
+//navigation variables
+$nav-bar__height: 80px;

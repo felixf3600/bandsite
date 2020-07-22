@@ -1,0 +1,71 @@
+.hero-banner__container-shows {
+  @extend .hero-banner__container;
+  height: 472px;
+  background-image: $hero-image__overlay--shows;
+  @include tablet {
+    height: 670px;
+  }
+  @include desktop {
+    @include display-flex(row, left, center);
+  }
+}
+.hero-banner__left-side-shows {
+  @extend .hero-banner__left-side;
+  @include desktop {
+    width: 644px;
+    align-self: flex-start;
+  }
+}
+
+.hero-banner__right-side {
+  padding: $base__padding * 8 0 $base__padding * 4 0;
+  iframe {
+    object-fit: cover;
+    width: 90vw;
+    height: 90px;
+    max-width: 436px;
+    @include tablet {
+      height: 146px;
+    }
+  }
+  @include tablet {
+    width: $tablet__grid-column * 5 + $tablet__grid-gutter * 4;
+  }
+  @include desktop {
+    @include display-flex(row, left, center);
+
+    width: 500px;
+  }
+}
+.hero-banner__title-shows {
+  @include font__mobile-h1-header--shows;
+  margin: 0px;
+  @include tablet {
+    width: $tablet__grid-column * 5 + $tablet__grid-gutter * 4;
+    @include font__hero-header;
+    span {
+      display: none;
+    }
+  }
+}
+.hero-banner__album-name {
+  color: $color__field-background-fill;
+  padding-top: $base__padding * 8;
+  margin: 0px;
+  @include font__mobile-normal;
+  @include tablet {
+    font-weight: bold;
+    padding-top: $base__padding * 12;
+    padding-bottom: $base__padding * 3;
+    @include font__h2;
+  }
+  @include desktop {
+    padding-top: $base__padding * 20;
+    padding-bottom: $base__padding * 6;
+  }
+}
+
+.shows__container {
+}
+.shows__container-title {
+}
