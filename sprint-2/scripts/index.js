@@ -30,13 +30,9 @@ commentObjectArray[0].datestamp = new Date(2018, 11, 18);
 commentObjectArray[1].datestamp = new Date(2018, 11, 12);
 commentObjectArray[2].datestamp = new Date(2018, 10, 15);
 
-//shows variables
-let showsObjectArray = []; // array for the shows
-
 // DOM loaded event listener
 document.addEventListener("DOMContentLoaded", function () {
   // the DOM for shows and comments section
-  let showsContainer = document.getElementById("shows__container");
   let commentsContainer = document.getElementById(
     "comments__display-container"
   );
@@ -45,23 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
     "comments__submit-button"
   )[0];
 
-  //clears the DOM for for the comments section. in order to "repaint" the DOM
-  function clearComments(comment) {
-    return (comment.innerHTML = "");
-  }
-  // this gets the comment posted
-  function getCommentPost() {
-    const commentForm = document.getElementById("comments__form");
-
-    let newComment = {
-      name: commentForm.commentsFormName.value,
-      comment: commentForm.commentsFormComment.value,
-      datestamp: new Date(),
-      photo: " ",
-    };
-    console.log(newComment);
-    return newComment; //returns the new comment as an object
-  }
   // Display the initial comments
   displayComment(commentsContainer);
 
@@ -74,6 +53,25 @@ document.addEventListener("DOMContentLoaded", function () {
     displayComment(commentsContainer); // diplays the comments
   });
   //displays and appends the comment section
+  //clears the DOM for for the comments section. in order to "repaint" the DOM
+  function clearComments(comment) {
+    return (comment.innerHTML = "");
+  }
+
+  // this gets the comment posted
+  function getCommentPost() {
+    const commentForm = document.getElementById("comments__form");
+    let newComment = {
+      name: commentForm.commentsFormName.value,
+      comment: commentForm.commentsFormComment.value,
+      datestamp: new Date(),
+      photo: " ",
+    };
+    // clears the input elements
+    commentForm.commentsFormName.value = " ";
+    commentForm.commentsFormComment.value = " ";
+    return newComment; //returns the new comment as an object
+  }
 
   function createEl(elementType, classes) {
     const element = document.createElement(elementType);
@@ -96,8 +94,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function displayComment(commentTree) {
     const commentList = document.createElement("ul"); //creates a unordered list
+    commentList.className = "comments__list";
     commentList.innerHTML = "";
-    length = commentObjectArray.length - 1; // gets the lenght of the array
+    let length = commentObjectArray.length - 1; // gets the lenght of the array
     // because this needs to display last first the index decreases
     for (i = length; i >= 0; i--) {
       const newComment = document.createElement("li"); //  creates the list item
