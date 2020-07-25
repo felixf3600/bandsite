@@ -2,22 +2,22 @@
 $master__font: "avenir-next-lt-pro", "roboto", sans-serif;
 // mobile font info
 // h1 header
-$mobile-h1-header__font-size: 7.5; // 24px 7.5vw
-$mobile-h1-header__line-height: 10vw; // 32px 10vw
-$mobile-h1-header__font-size--shows: 35px; // 24px 11vw
-$mobile-h1-header__line-height--shows: 42px; // 32px 13vw
+$mobile-h1-header__font-size: 1.85rem; // 24px 7.5vw
+$mobile-h1-header__line-height: 2.46rem; // 32px 10vw
+// $mobile-h1-header__font-size--shows: 35px; // 24px 11vw
+// $mobile-h1-header__line-height--shows: 42px; // 32px 13vw
 
 // subheader h2
-$mobile-h2-header__font-size: 4.38vw; // 14px
-$mobile-h2-header__line-height: 6.88vw; // 22px
+$mobile-h2-header__font-size: 1.08rem; // 14px
+$mobile-h2-header__line-height: 1.85rem; // 22px
 
 // paragraph, list and contact info
-$mobile-normal__font-size: 4.06vw; // 13px base mobile font size
-$mobile__line-height: 6.62vw; /// 18px
+$mobile-normal__font-size: 13px; // 13px base mobile font size
+$mobile__line-height: 1.38rem; /// 18px
 
 // h5 labels
-$mobile-labels__font-size: 3.75vw; // 12px
-$mobile-labels__line-height: 6.25vw; // 20px
+$mobile-labels__font-size: 0.92rem; // 12px
+$mobile-labels__line-height: 1.54rem; // 20px
 
 // desktop and tablet font info
 // hero header h1
@@ -51,8 +51,8 @@ $color__paragraph: #323232;
 $color__label-style: #afafaf;
 $color__field-border: #e1e1e1;
 $color__field-background-fill: #fafafa;
-$color__divider: #004892; // mercury
-$color__showdows: #000000;
+$color__divider: #e1e1e1; // mercury
+$color__shadows: #000000;
 // instock colors
 $color__navigation-background-fill--instock: #323232;
 $color__primary-cta--instock: #004892;

@@ -117,9 +117,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let returnTime = "";
     console.log(modifiedDate);
     if (timeDifference < 60) {
-      returnTime = `${Math.ceil(timeDifference)} seconds ago`;
+      returnTime = `${Math.ceil(timeDifference)} sec ago`;
     } else if (timeDifference < 3600) {
-      returnTime = `${Math.floor(timeDifference / 60)} minutes ago`;
+      returnTime = `${Math.floor(timeDifference / 60)} min ago`;
     } else if (timeDifference < 86400) {
       returnTime = `${Math.floor(timeDifference / 3600)} hours ago`;
     } else if (timeDifference < 604800) {
@@ -153,20 +153,19 @@ document.addEventListener("DOMContentLoaded", function () {
     for (i = length; i >= 0; i--) {
       const newComment = document.createElement("li"); //  creates the list item
       newComment.className = "comments__single-comment-container"; // adds a class to the list item
+      const innerContainer = document.createElement("div");
+      innerContainer.className = "comments-single-right";
       // creates the elements
       const photo = addElement(i, "div", "comments__single-photo", "photo");
       const name = addElement(i, "p", "comments__single-name", "name");
       const date = addDate(i, "p", "comments__single-date", "datestamp");
       const comment = addElement(i, "p", "comments__single-comment", "comment");
-      const nameLabel = addsLabel("p", "comments__single-label", "NAME");
-      const commentLabel = addsLabel("p", "comments__single-label", "COMMENT");
       // appends labels and elements
       newComment.appendChild(photo);
-      newComment.appendChild(nameLabel);
-      newComment.appendChild(name);
-      newComment.appendChild(date);
-      newComment.appendChild(commentLabel);
-      newComment.appendChild(comment);
+      innerContainer.appendChild(name);
+      innerContainer.appendChild(date);
+      innerContainer.appendChild(comment);
+      newComment.appendChild(innerContainer);
       appendComment(commentList, newComment);
     }
     appendComment(commentTree, commentList);

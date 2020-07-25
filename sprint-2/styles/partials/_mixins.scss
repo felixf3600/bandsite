@@ -22,12 +22,12 @@
     $mobile-h1-header__line-height
   );
 }
-@mixin font__mobile-h1-header--shows {
-  @include font-selector(
-    $mobile-h1-header__font-size--shows,
-    $mobile-h1-header__line-height--shows
-  );
-}
+// @mixin font__mobile-h1-header--shows {
+//   @include font-selector(
+//     $mobile-h1-header__font-size--shows,
+//     $mobile-h1-header__line-height--shows
+//   );
+// }
 @mixin font__mobile-h2-header {
   @include font-selector(
     $mobile-h2-header__font-size,

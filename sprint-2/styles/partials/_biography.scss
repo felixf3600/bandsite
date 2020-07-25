@@ -40,6 +40,8 @@ body {
 
 .hero-banner__title {
   color: $color__field-background-fill;
+  @include font__mobile-h1-header;
+
   @include tablet {
     @include font__hero-header;
     width: 600px;
@@ -49,10 +51,9 @@ body {
   //   padding-left: $desktop__grid-margin;
   // }
 }
-.hero-banner__title-biography {
-  @extend .hero-banner__title;
-  @include font__mobile-h1-header;
-}
+// .hero-banner__title-biography {
+//   @extend .hero-banner__title;
+// }
 // about container styling
 .about__container {
   margin: $mobile__grid-margin * 2 $mobile__grid-margin $mobile__grid-margin *
@@ -170,7 +171,7 @@ body {
 
 // photo gallery container styling
 .photo-gallery__container {
-  margin: $mobile__grid-margin * 2 $mobile__grid-margin $mobile__grid-margin * 2
+  margin: $mobile__grid-margin * 2 $mobile__grid-margin $base__padding * 5
     $mobile__grid-margin;
   @include tablet {
     @include display-flex(column, center, left);
@@ -251,5 +252,190 @@ body {
     &:hover {
       filter: none;
     }
+  }
+}
+.comments__container {
+  @include display-flex(column, center, center);
+}
+.comments__container-title {
+  @include font__mobile-h1-header;
+  margin: $base__padding * 4 $mobile__grid-margin $base__padding * 5
+    $mobile__grid-margin;
+  width: 288px;
+  @include tablet {
+    @include font__h1;
+    margin-left: $tablet__grid-margin;
+    margin-right: $tablet__grid-margin;
+    // justify-self: left;
+    width: $tablet__grid-column * 6 + $tablet__grid-gutter * 5;
+  }
+  @include desktop {
+    margin: $base__padding * 6 $desktop__grid-margin $base__padding * 7
+      $desktop__grid-margin;
+    width: $desktop__min-width - $desktop__grid-margin * 2;
+  }
+}
+.comments__form-container {
+  margin: 0 $mobile__grid-margin $mobile__grid-margin * 2 $mobile__grid-margin;
+  @include display-flex(row, space-between, flex-start);
+  width: 288px;
+  border-bottom: 1px solid $color__divider;
+  form {
+    label {
+      @include font__mobile-labels;
+      color: $color__label-style;
+    }
+  }
+  @include tablet {
+    justify-content: left;
+    // margin-left: 20px;
+    width: $tablet__grid-gutter * 5 + $tablet__grid-column * 4;
+  }
+  @include desktop {
+    width: $desktop__grid-column * 6 + $desktop__grid-gutter * 5;
+  }
+}
+.comments__user-image {
+  margin-top: $base__padding * 2;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: left;
+  margin-right: 16px;
+  @include desktop {
+    margin-right: 20px;
+  }
+}
+.comments__form {
+  width: 224px;
+  height: 280px;
+  position: relative;
+  &-name {
+    width: 216px;
+    height: $base__padding * 4;
+    border-radius: 2px;
+    box-shadow: 40px 0 32px -4 $color__field-border;
+    border-color: $color__field-border;
+    &:focus {
+      border-color: $color__shadows;
+    }
+    @include tablet {
+      width: ($tablet__grid-gutter * 5 + $tablet__grid-column * 4)- 72px;
+    }
+    @include desktop {
+      width: 452px;
+    }
+  }
+  &-comment {
+    width: 216px;
+    height: $base__padding * 10;
+    resize: none;
+    border-radius: 2px;
+    box-shadow: 40px 0 32px -4 $color__field-border;
+    border-color: $color__field-border;
+    &:focus {
+      border-color: $color__shadows;
+    }
+    @include tablet {
+      width: ($tablet__grid-gutter * 5 + $tablet__grid-column * 4)- 72px;
+    }
+    @include desktop {
+      width: 452px;
+    }
+  }
+  @include tablet {
+    width: ($tablet__grid-gutter * 5 + $tablet__grid-column * 4)- 64px;
+  }
+  @include desktop {
+    width: 460px;
+  }
+}
+.comments__submit-button {
+  width: 224px;
+  margin-top: 24px;
+  background-color: $color__primary-cta--bandsite;
+  border-radius: 4px;
+  color: $color__field-background-fill;
+  height: $base__padding * 4;
+  font-weight: bold;
+  &:hover {
+    background-color: $color__primary-hover--bandsite;
+  }
+  @include tablet {
+    width: 160px;
+    position: absolute;
+    right: 0px;
+    height: 48px;
+  }
+}
+.comments__display-container {
+  margin: 0 $mobile__grid-margin $mobile__grid-margin * 2 $mobile__grid-margin;
+  @include display-flex(row, center, flex-start);
+  width: 288px;
+  @include tablet {
+    margin: $base__padding * 3 $tablet__grid-margin $base__padding * 5
+      $tablet__grid-margin;
+    width: ($tablet__grid-gutter * 5 + $tablet__grid-column * 4);
+  }
+  @include desktop {
+    margin: $base__padding * 3 $desktop__grid-margin $base__padding * 5
+      $desktop__grid-margin;
+  }
+}
+.comments__single-photo {
+  width: 48px;
+  margin-top: $base__padding * 2;
+  height: 48px;
+  border-radius: 50%;
+  background-color: $color__label-style;
+  @include desktop {
+    margin-right: 16px;
+  }
+}
+.comments__list {
+  width: 288px;
+  padding: 0;
+  margin: 0;
+  @include tablet {
+    width: 520px;
+  }
+}
+.comments__single-comment-container {
+  @include display-flex(row, space-between, flex-start);
+  border-bottom: 1px solid $color__divider;
+  @include tablet {
+    width: 520px;
+  }
+  @include desktop {
+    width: 528px;
+    justify-content: left;
+  }
+}
+.comments-single-right {
+  width: $mobile__grid-gutter * 3 + $mobile__grid-column * 3;
+
+  @include tablet {
+    width: ($tablet__grid-gutter * 5 + $tablet__grid-column * 4)- 64px;
+  }
+  @include desktop {
+    margin-bottom: 24px;
+  }
+}
+.comments__single-name {
+  display: inline-block;
+  font-weight: bold;
+  width: ($mobile__grid-gutter * 3 + $mobile__grid-column * 3)- 65px;
+  @include tablet {
+    width: fit-content;
+  }
+}
+.comments__single-date {
+  display: inline-block;
+  width: 65px;
+  color: $color__label-style;
+  @include tablet {
+    width: fit-content;
+    margin-left: $base__padding;
   }
 }
