@@ -1,115 +1,122 @@
-.nav__container {
-  min-height: $nav-bar__height;
+.navigation {
+  height: $nav-bar__height;
   width: 100%;
   min-width: $mobile__min-width;
   @include display-flex(column, center, center);
   background-color: $color__navigation-background-fill--bandsite;
   color: $color__field-background-fill;
-  @include tablet {
-    @include display-flex(row, flex-start, center);
-  }
   a {
     text-decoration: none;
     color: $color__field-background-fill;
   }
-}
-.nav__logo {
-  width: 100%;
-  text-align: center;
-  @include font__mobile-h1-header;
-  font-weight: 300;
-  margin: 0.32rem 0 0.92rem 0;
   @include tablet {
-    width: $tablet__grid-column + $tablet__grid-gutter;
-    @include font__h2;
-    margin: 0 0 0 $tablet__grid-margin;
+    @include display-flex(row, flex-start, center);
   }
-  @include desktop {
-    margin-left: $desktop__grid-margin;
-  }
-}
-
-.nav__link-list {
-  @include display-flex(row, right, flex-end);
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0px;
-  width: 100%;
-  padding-bottom: $base__padding;
-  @include tablet {
-    width: ($tablet__grid-column + $tablet__grid-gutter) * 2;
-    padding-bottom: 0px;
-  }
-}
-.nav__list-item {
-  width: 50%;
-  min-width: $mobile__min-width/2;
-  text-align: center;
-  position: relative;
-  &--current-page {
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -9px;
-      left: 0px;
-      height: 5px;
-      width: 100%;
-      background-color: $color__field-background-fill;
+  &__logo {
+    width: 100%;
+    text-align: center;
+    @include font__mobile-h1-header;
+    font-weight: 300;
+    margin: $base__padding * 0.5 0 $base__padding * 1.5 0;
+    @include tablet {
+      width: $tablet__grid-column + $tablet__grid-gutter;
+      @include font__h2;
+      margin: 0 0 0 $tablet__grid-margin;
+    }
+    @include desktop {
+      margin-left: $desktop__grid-margin;
     }
   }
-  @include tablet {
-    width: 80px;
-    text-align: end;
+  &__links {
+    @include display-flex(row, right, flex-end);
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0px;
+    width: 100%;
+    padding-bottom: $base__padding;
+    @include tablet {
+      width: ($tablet__grid-column + $tablet__grid-gutter) * 3;
+      padding-bottom: 0px;
+    }
+  }
+  &__list-item {
+    width: 50%;
+    min-width: $mobile__min-width/2;
+    text-align: center;
+    position: relative;
     &--current-page {
       &::after {
-        bottom: -28px;
-        left: 82px;
-        width: 80px;
+        content: "";
+        position: absolute;
+        bottom: -9px;
+        right: 0px;
+        height: 5px;
+        width: 100%;
+        background-color: $color__field-background-fill;
       }
     }
-  }
-  @include desktop {
-    width: 80px;
-    min-width: 0px;
-    margin-left: 56px;
-    &::after {
-      left: -5px;
+    @include tablet {
+      width: 80px;
+      text-align: end;
+      &--current-page {
+        &::after {
+          bottom: -28px;
+          right: 0px;
+          width: 80px;
+        }
+      }
     }
-  }
-}
-.nav__link {
-  text-decoration: none;
-  @include font__mobile-h2-header;
-  color: $color__label-style;
-  position: relative;
-  &--current-page {
-    color: $color__field-background-fill;
-  }
-  @include tablet {
-    @include font__sub-header;
-  }
-  @media (hover: hover) {
-    &:hover {
-      animation-name: expand;
-      animation-duration: 2s;
-      animation-iteration-count: infinite;
+    @include desktop {
+      min-width: 0px;
+      margin-left: 56px;
     }
-  }
-}
-@keyframes expand {
-  0% {
-    color: white;
-  }
-  25% {
-    color: yellow;
-  }
-  50% {
-    color: orange;
-  }
-  75% {
-    color: red;
-  }
-  100% {
-    color: green;
+    &-link {
+      text-decoration: none;
+      @include font__mobile-h2-header;
+      color: $color__label-style;
+      position: relative;
+      &--current-page {
+        color: $color__field-background-fill;
+        font-weight: bold;
+      }
+      @include tablet {
+        @include font__sub-header;
+      }
+      @media (hover: hover) {
+        &:hover {
+          animation-name: expand;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+        }
+      }
+      p {
+        margin: 0px;
+        @include tablet {
+          margin-left: 80px;
+          width: $base__padding * 10;
+          text-align: center;
+        }
+        @include desktop {
+          margin: 0px;
+        }
+      }
+    }
+    @keyframes expand {
+      0% {
+        color: white;
+      }
+      25% {
+        color: yellow;
+      }
+      50% {
+        color: orange;
+      }
+      75% {
+        color: red;
+      }
+      100% {
+        color: green;
+      }
+    }
   }
 }
