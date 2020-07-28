@@ -1237,7 +1237,6 @@ body {
 .comments__single-name {
   display: inline-block;
   font-weight: bold;
-  overflow: hidden;
   width: 134px;
 }
 

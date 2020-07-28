@@ -424,7 +424,6 @@ body {
   &__single-name {
     display: inline-block;
     font-weight: bold;
-    overflow: hidden;
     width: ($mobile__grid-gutter * 3 + $mobile__grid-column * 3)- 100px;
     @include tablet {
       width: fit-content;

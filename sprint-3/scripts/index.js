@@ -20,10 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault(); // prevents normal button operations
     const isDataValid = formFilled(event);
     if (isDataValid) {
-      writeComment(event); // writes to the site
-      getCommdent(); // gets new comment list
-      clearComments(commentsContainer); // clears the DOM tree for the comments section
-      displayComment(commentsContainer); // diplays the comments
+      writeComment(event, commentsContainer); // writes to the site
     } else {
       alert("please fill form.");
     }
@@ -56,14 +53,19 @@ document.addEventListener("DOMContentLoaded", function () {
     commentForm.commentsFormComment.value = "";
   }
   // this gets the comment posted
-  function writeComment(event) {
-    axios.post(
-      `https://project-1-api.herokuapp.com/comments?api_key=c9001db9-412f-4feb-b1d1-a68a702e8546`,
-      {
-        name: event.target.commentsFormName.value,
-        comment: event.target.commentsFormComment.value,
-      }
-    );
+  function writeComment(event, commentsContainer) {
+    axios
+      .post(
+        `https://project-1-api.herokuapp.com/comments?api_key=c9001db9-412f-4feb-b1d1-a68a702e8546`,
+        {
+          name: event.target.commentsFormName.value,
+          comment: event.target.commentsFormComment.value,
+        }
+      )
+      .then(() => {
+        clearComments(commentsContainer); // clears the DOM tree for the comments section
+        getCommdent(commentsContainer);
+      });
     // clears the input elements
     clearForm();
   }
@@ -116,7 +118,6 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       returnTime = modifiedDate;
     }
-    console.log(time, modifiedDate);
     return returnTime;
   }
   // creates the date element and returns it
