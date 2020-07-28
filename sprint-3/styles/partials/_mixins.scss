@@ -1,0 +1,68 @@
+// media query mixin
+@mixin desktop {
+  @media screen and (min-width: $desktop__min-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet__min-width) {
+    @content;
+  }
+}
+
+// font mixins
+@mixin font-selector($font, $line-height) {
+  font-size: $font;
+  line-height: $line-height;
+}
+@mixin font__mobile-h1-header {
+  @include font-selector(
+    $mobile-h1-header__font-size,
+    $mobile-h1-header__line-height
+  );
+}
+
+@mixin font__mobile-h2-header {
+  @include font-selector(
+    $mobile-h2-header__font-size,
+    $mobile-h2-header__line-height
+  );
+}
+@mixin font__mobile-normal {
+  @include font-selector($mobile-normal__font-size, $mobile__line-height);
+}
+@mixin font__mobile-labels {
+  @include font-selector(
+    $mobile-labels__font-size,
+    $mobile-labels__line-height
+  );
+}
+@mixin font__hero-header {
+  @include font-selector($hero-header__font-size, $hero-header__line-height);
+}
+@mixin font__h1 {
+  @include font-selector($h1__font-size, $h1__line-height);
+}
+@mixin font__h2 {
+  @include font-selector($h2__font-size, $h2__line-height);
+}
+@mixin font__sub-header {
+  @include font-selector($sub-header__font-size, $sub-header__line-height);
+}
+@mixin font__normal {
+  @include font-selector($normal__font-size, $normal__line-height);
+}
+@mixin font__list-contact {
+  @include font-selector($normal__font-size, $list__line-height);
+}
+@mixin font__labels {
+  @include font-selector($labels__font-size, $list__line-height);
+}
+// display flex
+@mixin display-flex($direction, $justification, $alignment) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justification;
+  align-items: $alignment;
+}

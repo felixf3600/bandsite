@@ -1,0 +1,443 @@
+html,
+body {
+  font-family: $master__font;
+  box-sizing: border-box;
+  @include font__mobile-normal;
+  margin: 0px;
+  @include tablet {
+    @include font__normal;
+  }
+}
+// hero container styling
+.hero-banner {
+  &__container {
+    background-size: cover;
+    padding: 0 0 0 $mobile__grid-margin;
+    @include tablet {
+      padding-left: $tablet__grid-margin;
+    }
+    @include desktop {
+      padding-left: $desktop__grid-margin;
+    }
+
+    &-biography {
+      @extend .hero-banner__container;
+      background-image: $hero-image__overlay--biography;
+    }
+  }
+  &__left-side {
+    @include display-flex(column, center, left);
+
+    &-biography {
+      @extend .hero-banner__left-side;
+      height: 57.19vw;
+      @include tablet {
+        height: 52.08vw;
+      }
+    }
+  }
+  &__title {
+    color: $color__field-background-fill;
+    @include font__mobile-h1-header;
+
+    @include tablet {
+      @include font__hero-header;
+      width: 600px;
+    }
+  }
+}
+// about container styling
+.about {
+  &__container {
+    margin: $mobile__grid-margin * 2 $mobile__grid-margin $mobile__grid-margin *
+      2.5 $mobile__grid-margin;
+    @include tablet {
+      margin: $tablet__grid-gutter * 2 $tablet__grid-gutter;
+    }
+    @include desktop {
+      margin: $desktop__grid-gutter $desktop__grid-margin;
+    }
+    @include display-flex(column, center, center);
+  }
+  &__title {
+    @include font__mobile-h1-header;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    @include tablet {
+      @include font__h1;
+    }
+
+    @include desktop {
+      width: 896px + $desktop__grid-column * 2 + $desktop__grid-gutter * 2;
+      text-align: left;
+    }
+  }
+
+  &__image {
+    min-width: 288px;
+    width: 100%;
+    margin: $tablet__grid-gutter 0;
+    @include desktop {
+      width: 896px;
+      margin: $desktop__grid-gutter * 2
+        ($desktop__grid-gutter + $desktop__grid-column);
+    }
+  }
+  &__caption {
+    margin: 0;
+    font-weight: bold;
+    @include font__mobile-h2-header;
+    @include tablet {
+      @include font__h1;
+    }
+    @include desktop {
+      width: 896px;
+      margin: $desktop__grid-gutter * 2
+        ($desktop__grid-gutter + $desktop__grid-column);
+    }
+  }
+  &__caption-author {
+    font-weight: bold;
+    @include font__mobile-labels;
+    margin: $base__padding * 4 0 $base__padding * 5 0;
+    width: 100%;
+    text-align: left;
+    @include tablet {
+      @include font__h2;
+    }
+    @include desktop {
+      width: 896px;
+      margin: $base__padding * 5 ($desktop__grid-gutter + $desktop__grid-column);
+    }
+  }
+  &__inner-container-tittle {
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    @include font__mobile-h2-header;
+    @include tablet {
+      @include font__h1;
+    }
+    @include desktop {
+      width: 896px;
+      margin: 0 $desktop__grid-margin;
+    }
+  }
+  &__artice-container {
+    margin: $base__padding * 3 0 $base__padding * 5 0;
+    @include tablet {
+      @include display-flex(row, center, center);
+    }
+    @include desktop {
+      width: 896px;
+      margin: $base__padding * 4 $desktop__grid-margin $base__padding * 6
+        $desktop__grid-margin;
+      justify-content: left;
+    }
+  }
+  &__article {
+    @include tablet {
+      width: 45.31vw;
+    }
+    @include desktop {
+      width: 420px;
+    }
+
+    &:first-child {
+      margin-top: 0px;
+      @include tablet {
+        margin: 0px;
+        margin-right: $tablet__grid-gutter;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0px;
+      @include tablet {
+        margin: 0px;
+      }
+      @include desktop {
+        margin-left: 40px;
+      }
+    }
+  }
+}
+// photo gallery container styling
+.photo-gallery {
+  background-color: $color__field-background-fill;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    margin: $mobile__grid-margin * 2 $mobile__grid-margin $base__padding * 5
+      $mobile__grid-margin;
+    @include tablet {
+      @include display-flex(column, center, left);
+      margin-left: $tablet__grid-margin;
+      margin-right: $tablet__grid-margin;
+      width: 93.75vw;
+    }
+    @include desktop {
+      margin: $base__padding * 6 $desktop__grid-margin;
+    }
+  }
+  &__title {
+    @include font__mobile-h1-header;
+    @include tablet {
+      @include font__h1;
+    }
+    @include desktop {
+      width: 1080px;
+    }
+  }
+  &__grid-container {
+    margin: 0px;
+    @include tablet {
+      @include display-flex(row, left, center);
+      flex-wrap: wrap;
+
+      margin-bottom: $tablet__grid-margin;
+    }
+    @include desktop {
+      margin-bottom: $base__padding * 5;
+    }
+  }
+  &__image-container {
+    margin: 0 0 $base__padding * 2 0;
+    object-fit: cover;
+    @include desktop {
+      margin-bottom: $base__padding * 3;
+    }
+
+    &:nth-child(2) {
+      @include tablet {
+        margin-left: $tablet__grid-margin;
+        margin-right: $tablet__grid-margin;
+      }
+    }
+    &:nth-child(5) {
+      @include tablet {
+        margin-left: $tablet__grid-margin;
+        margin-right: $tablet__grid-margin;
+      }
+    }
+    &:nth-child(8) {
+      @include tablet {
+        margin-left: $tablet__grid-margin;
+        margin-right: $tablet__grid-margin;
+      }
+    }
+  }
+  &__image {
+    min-width: $mobile__min-width - ($mobile__grid-margin * 2);
+    width: 100%;
+    object-fit: contain;
+    @include tablet {
+      min-width: 0;
+      width: 29.16vw;
+      height: 16.41vw;
+    }
+    @include desktop {
+      width: 344px;
+      height: 193px;
+    }
+
+    @media (hover: hover) {
+      filter: grayscale(80%);
+      &:hover {
+        filter: none;
+      }
+    }
+  }
+}
+.comments {
+  &__container {
+    @include display-flex(column, center, center);
+
+    &-title {
+      @include font__mobile-h1-header;
+      margin: $base__padding * 4 $mobile__grid-margin $base__padding * 5
+        $mobile__grid-margin;
+      width: 288px;
+      @include tablet {
+        @include font__h1;
+        margin-left: $tablet__grid-margin;
+        margin-right: $tablet__grid-margin;
+        // justify-self: left;
+        width: $tablet__grid-column * 6 + $tablet__grid-gutter * 5;
+      }
+      @include desktop {
+        margin: $base__padding * 6 $desktop__grid-margin $base__padding * 7
+          $desktop__grid-margin;
+        width: $desktop__min-width - $desktop__grid-margin * 2;
+      }
+    }
+  }
+  &__form-container {
+    margin: 0 $mobile__grid-margin $mobile__grid-margin * 2 $mobile__grid-margin;
+    @include display-flex(row, space-between, flex-start);
+    width: 288px;
+    border-bottom: 1px solid $color__divider;
+    form {
+      label {
+        @include font__mobile-labels;
+        color: $color__label-style;
+      }
+    }
+    @include tablet {
+      justify-content: left;
+      // margin-left: 20px;
+      width: $tablet__grid-gutter * 5 + $tablet__grid-column * 4;
+    }
+    @include desktop {
+      width: $desktop__grid-column * 6 + $desktop__grid-gutter * 5;
+    }
+  }
+  &__user-image {
+    margin-top: $base__padding * 2;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: left;
+    margin-right: 16px;
+    @include desktop {
+      margin-right: 20px;
+    }
+  }
+  &__form {
+    width: 224px;
+    height: 280px;
+    position: relative;
+    &-name {
+      width: 216px;
+      height: $base__padding * 4;
+      border-radius: 2px;
+      box-shadow: 40px 0 32px -4 $color__field-border;
+      border-color: $color__field-border;
+      &:focus {
+        border-color: $color__shadows;
+      }
+      @include tablet {
+        width: ($tablet__grid-gutter * 5 + $tablet__grid-column * 4)- 72px;
+      }
+      @include desktop {
+        width: 452px;
+      }
+    }
+    &-comment {
+      width: 216px;
+      height: $base__padding * 10;
+      resize: none;
+      border-radius: 2px;
+      box-shadow: 40px 0 32px -4 $color__field-border;
+      border-color: $color__field-border;
+      &:focus {
+        border-color: $color__shadows;
+      }
+      @include tablet {
+        width: ($tablet__grid-gutter * 5 + $tablet__grid-column * 4)- 72px;
+      }
+      @include desktop {
+        width: 452px;
+      }
+    }
+    @include tablet {
+      width: ($tablet__grid-gutter * 5 + $tablet__grid-column * 4)- 64px;
+    }
+    @include desktop {
+      width: 460px;
+    }
+  }
+  &__submit-button {
+    width: 224px;
+    margin-top: 24px;
+    background-color: $color__primary-cta--bandsite;
+    border-radius: 4px;
+    color: $color__field-background-fill;
+    height: $base__padding * 4;
+    font-weight: bold;
+    &:hover {
+      background-color: $color__primary-hover--bandsite;
+    }
+    @include tablet {
+      width: 160px;
+      position: absolute;
+      right: 0px;
+      height: 48px;
+    }
+  }
+  &__display-container {
+    margin: 0 $mobile__grid-margin $mobile__grid-margin * 2 $mobile__grid-margin;
+    @include display-flex(row, center, flex-start);
+    width: 288px;
+    @include tablet {
+      margin: $base__padding * 3 $tablet__grid-margin $base__padding * 5
+        $tablet__grid-margin;
+      width: ($tablet__grid-gutter * 5 + $tablet__grid-column * 4);
+    }
+    @include desktop {
+      margin: $base__padding * 3 $desktop__grid-margin $base__padding * 5
+        $desktop__grid-margin;
+    }
+  }
+  &__single-photo {
+    width: 48px;
+    margin-top: $base__padding * 2;
+    height: 48px;
+    border-radius: 50%;
+    background-color: $color__label-style;
+    @include desktop {
+      margin-right: 16px;
+    }
+  }
+  &__list {
+    width: 288px;
+    padding: 0;
+    margin: 0;
+    @include tablet {
+      width: 520px;
+    }
+  }
+  &__single-comment-container {
+    @include display-flex(row, space-between, flex-start);
+    border-bottom: 1px solid $color__divider;
+    @include tablet {
+      width: 520px;
+    }
+    @include desktop {
+      width: 528px;
+      justify-content: left;
+    }
+  }
+  &-single-right {
+    width: $mobile__grid-gutter * 3 + $mobile__grid-column * 3;
+
+    @include tablet {
+      width: ($tablet__grid-gutter * 5 + $tablet__grid-column * 4)- 64px;
+    }
+    @include desktop {
+      margin-bottom: 24px;
+    }
+  }
+  &__single-name {
+    display: inline-block;
+    font-weight: bold;
+    overflow: hidden;
+    width: ($mobile__grid-gutter * 3 + $mobile__grid-column * 3)- 100px;
+    @include tablet {
+      width: fit-content;
+    }
+  }
+  &__single-date {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    color: $color__label-style;
+    @include tablet {
+      width: fit-content;
+      margin-left: $base__padding;
+    }
+  }
+}
