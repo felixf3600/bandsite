@@ -148,8 +148,8 @@ document.addEventListener("DOMContentLoaded", function () {
     for (i = length; i >= 0; i--) {
       const newComment = document.createElement("li"); //  creates the list item
       newComment.className = "comments__single-comment-container"; // adds a class to the list item
-      const innerContainer = document.createElement("div");
-      innerContainer.className = "comments-single-right";
+      const rightContainer = document.createElement("div");
+      rightContainer.className = "comments-single-right";
       // creates the elements
       const photo = addElement(i, "div", "comments__single-photo", "photo");
       const name = addElement(i, "p", "comments__single-name", "name");
@@ -157,11 +157,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const comment = addElement(i, "p", "comments__single-comment", "comment");
       // appends labels and elements
       newComment.appendChild(photo);
-      innerContainer.appendChild(name);
-      innerContainer.appendChild(date);
-      innerContainer.appendChild(comment);
+      rightContainer.appendChild(name);
+      rightContainer.appendChild(date);
+      rightContainer.appendChild(comment);
       // appends the li to ul
-      newComment.appendChild(innerContainer);
+      newComment.appendChild(rightContainer);
       // appends the ul to the section
       appendComment(commentList, newComment);
     }

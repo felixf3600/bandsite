@@ -2,7 +2,8 @@
 // loading the array with mock data as we have not database yet
 // comments variables
 let commentObjectArray = [];
-
+let likeButton;
+let deleteButton;
 // DOM loaded event listener
 document.addEventListener("DOMContentLoaded", function () {
   // the DOM for shows and comments section
@@ -11,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   // DOM for form
   const form = document.querySelector(".comments__form");
+  // DOM for the like and delete button
 
   // Display the initial comments
   // .catch(alert("could not load comments"));
@@ -34,6 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => {
         commentObjectArray = response.data;
         displayComment(commentsContainer);
+        likeButton = document.querySelectorAll(".comments__like-button");
+        deleteButton = document.querySelectorAll(".comments__delete-button");
+        console.log(commentObjectArray);
+        buttonArrayListener(commentsContainer);
       });
   }
   // checks to see if the form is filled
@@ -64,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
       )
       .then(() => {
         clearComments(commentsContainer); // clears the DOM tree for the comments section
+        // clearButtonArrayListener();
         getCommdent(commentsContainer);
       });
     // clears the input elements
@@ -144,24 +151,77 @@ document.addEventListener("DOMContentLoaded", function () {
     for (i = length; i >= 0; i--) {
       const newComment = document.createElement("li"); //  creates the list item
       newComment.className = "comments__single-comment-container"; // adds a class to the list item
-      const innerContainer = document.createElement("div");
-      innerContainer.className = "comments-single-right";
+      const rightContainer = document.createElement("div");
+      rightContainer.className = "comments-single-right";
+      const leftContainer = document.createElement("div");
+      leftContainer.className = "comments-single-left";
+
       // creates the elements
       const photo = addPhoto("div", "comments__single-photo");
       const name = addElement(i, "p", "comments__single-name", "name");
       const date = addDate(i, "p", "comments__single-date", "timestamp");
       const comment = addElement(i, "p", "comments__single-comment", "comment");
-      // appends labels and elements
-      newComment.appendChild(photo);
-      innerContainer.appendChild(name);
-      innerContainer.appendChild(date);
-      innerContainer.appendChild(comment);
+      const likeButton = createEl("button", "comments__like-button");
+      const deleteButton = createEl("button", "comments__delete-button");
+      //sets id values to the like and delete button
+      likeButton.setAttribute("id", commentObjectArray[i].id);
+      console.log(commentObjectArray[1].likes);
+      likeButton.innerHTML = `<p>${commentObjectArray[i].likes}</p>`;
+      deleteButton.setAttribute("id", commentObjectArray[i].id);
+      // appends the left container children to parent
+      leftContainer.appendChild(photo);
+      leftContainer.appendChild(likeButton);
+      leftContainer.appendChild(deleteButton);
+      // appends the rightcontainer children to parent
+      rightContainer.appendChild(name);
+      rightContainer.appendChild(date);
+      rightContainer.appendChild(comment);
       // appends the li to ul
-      newComment.appendChild(innerContainer);
+      newComment.appendChild(leftContainer);
+      newComment.appendChild(rightContainer);
       // appends the ul to the section
       appendComment(commentList, newComment);
     }
     // appends the section to the DOM
     appendComment(commentTree, commentList);
   }
+  // creating eventlisteners for all buttons
+  function buttonArrayListener(commentsContainer) {
+    console.log(likeButton);
+    //creates event listeners for all like buttons
+    likeButton.forEach((button) =>
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+        console.log(button.id);
+        axios
+          .put(
+            `https://project-1-api.herokuapp.com/comments/${button.id}/like?api_key=c9001db9-412f-4feb-b1d1-a68a702e8546`
+          )
+          .then(() => {
+            // clears the DOM tree for the comments section
+            clearComments(commentsContainer);
+            // clearButtonArrayListener();
+            getCommdent(commentsContainer);
+          });
+      })
+    );
+    // creates event listeners for all delete buttons
+    deleteButton.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+        console.log(button.id);
+        axios
+          .delete(
+            `https://project-1-api.herokuapp.com/comments/${button.id}?api_key=c9001db9-412f-4feb-b1d1-a68a702e8546`
+          )
+          .then(() => {
+            // clears the DOM tree for the comments section
+            clearComments(commentsContainer);
+            // clearButtonArrayListener();
+            getCommdent(commentsContainer);
+          });
+      });
+    });
+  }
+  // function clearButtonArrayListener() {}
 });
