@@ -392,6 +392,13 @@ body {
       margin-right: 16px;
     }
   }
+  &__single-left {
+    @include display-flex(column, space-between, space-between);
+    height: 120px;
+    @include tablet {
+      height: fit-content;
+    }
+  }
   &__list {
     width: 288px;
     padding: 0;
@@ -411,7 +418,7 @@ body {
       justify-content: left;
     }
   }
-  &-single-right {
+  &__single-right {
     width: $mobile__grid-gutter * 3 + $mobile__grid-column * 3;
 
     @include tablet {
@@ -431,7 +438,7 @@ body {
   }
   &__single-date {
     display: inline-block;
-    width: 100px;
+    width: 90px;
     text-align: right;
     color: $color__label-style;
     @include tablet {
@@ -439,4 +446,19 @@ body {
       margin-left: $base__padding;
     }
   }
+}
+.comments__delete-button,
+.comments__like-button {
+  width: 50px;
+  color: $color__field-background-fill;
+  @include mobile__font-labels;
+  border-radius: 5px;
+}
+.comments__delete-button {
+  background-color: red;
+  padding: 0;
+}
+.comments__like-button {
+  background-color: blue;
+  padding: 0;
 }

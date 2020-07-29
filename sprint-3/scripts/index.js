@@ -148,9 +148,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const newComment = document.createElement("li"); //  creates the list item
       newComment.className = "comments__single-comment-container"; // adds a class to the list item
       const rightContainer = document.createElement("div");
-      rightContainer.className = "comments-single-right";
+      rightContainer.className = "comments__single-right";
       const leftContainer = document.createElement("div");
-      leftContainer.className = "comments-single-left";
+      leftContainer.className = "comments__single-left";
 
       // creates the elements
       const photo = addPhoto("div", "comments__single-photo");
@@ -161,10 +161,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const deleteButton = createEl("button", "comments__delete-button");
       //sets id values to the like and delete button
       likeButton.setAttribute("id", commentObjectArray[i].id);
-      likeButton.innerHTML = `<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>: <p>${commentObjectArray[i].likes}</p>`;
+      likeButton.innerHTML = `LIKES: ${commentObjectArray[i].likes}`;
       deleteButton.setAttribute("id", commentObjectArray[i].id);
-      deleteButton.innerHTML =
-        '<i class="fa fa-trash-o" aria-hidden="true"></i>';
+      deleteButton.innerHTML = "DELETE";
       // appends the left container children to parent
       leftContainer.appendChild(photo);
       leftContainer.appendChild(likeButton);
