@@ -12,10 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   // DOM for form
   const form = document.querySelector(".comments__form");
-  // DOM for the like and delete button
-
   // Display the initial comments
-  // .catch(alert("could not load comments"));
   getCommdent(commentsContainer);
   // event listener for the comments button
   form.addEventListener("submit", (event) => {
@@ -38,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
         displayComment(commentsContainer);
         likeButton = document.querySelectorAll(".comments__like-button");
         deleteButton = document.querySelectorAll(".comments__delete-button");
-        console.log(commentObjectArray);
         buttonArrayListener(commentsContainer);
       });
   }
@@ -165,9 +161,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const deleteButton = createEl("button", "comments__delete-button");
       //sets id values to the like and delete button
       likeButton.setAttribute("id", commentObjectArray[i].id);
-      console.log(commentObjectArray[1].likes);
-      likeButton.innerHTML = `<p>${commentObjectArray[i].likes}</p>`;
+      likeButton.innerHTML = `<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>: <p>${commentObjectArray[i].likes}</p>`;
       deleteButton.setAttribute("id", commentObjectArray[i].id);
+      deleteButton.innerHTML =
+        '<i class="fa fa-trash-o" aria-hidden="true"></i>';
       // appends the left container children to parent
       leftContainer.appendChild(photo);
       leftContainer.appendChild(likeButton);
@@ -187,12 +184,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   // creating eventlisteners for all buttons
   function buttonArrayListener(commentsContainer) {
-    console.log(likeButton);
     //creates event listeners for all like buttons
     likeButton.forEach((button) =>
       button.addEventListener("click", (event) => {
         event.preventDefault();
-        console.log(button.id);
         axios
           .put(
             `https://project-1-api.herokuapp.com/comments/${button.id}/like?api_key=c9001db9-412f-4feb-b1d1-a68a702e8546`
@@ -209,7 +204,6 @@ document.addEventListener("DOMContentLoaded", function () {
     deleteButton.forEach((button) => {
       button.addEventListener("click", (event) => {
         event.preventDefault();
-        console.log(button.id);
         axios
           .delete(
             `https://project-1-api.herokuapp.com/comments/${button.id}?api_key=c9001db9-412f-4feb-b1d1-a68a702e8546`
